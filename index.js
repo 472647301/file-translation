@@ -19,6 +19,9 @@ commander.option('-a, --appkey', '您的应用ID')
 commander.option('-f, --file', '要翻译的文件目录')
 commander.option('-o, --output', '翻译输出目录')
 
+// 解析
+commander.parse(process.argv)
+
 const outputKey = {}
 const url = 'http://openapi.youdao.com/api'
 
