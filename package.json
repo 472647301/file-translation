@@ -1,0 +1,29 @@
+{
+  "name": "text-translation",
+  "version": "1.0.0",
+  "description": "有道翻译API",
+  "bin": {
+    "text-translation": "index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/472647301/text-translation.git"
+  },
+  "author": "472647301@qq.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/472647301/text-translation/issues"
+  },
+  "homepage": "https://github.com/472647301/text-translation#readme",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "commander": "^3.0.1",
+    "md5": "^2.2.1",
+    "minimist": "^1.2.0",
+    "progress": "^2.0.3",
+    "qs": "^6.8.0"
+  }
+}
