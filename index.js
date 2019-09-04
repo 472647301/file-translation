@@ -79,7 +79,7 @@ function main() {
 function loadFile(file) {
   let str = ''
   try {
-    const data = require(file)
+    const data = require(path.join(process.cwd(), file))
     if (typeof data !== 'object') {
       throw new Error('翻译结束，解析翻译文件失败！！！')
     }
@@ -105,7 +105,7 @@ function outputFile(str) {
     content[outputKey[i]] = k
   })
   const name = md5(Date.now() + 'byron')
-  const file = path.join(__dirname, `${name}.json`)
+  const file = path.join(process.cwd(), `${name}.json`)
   fs.writeFile(file, JSON.stringify(content), function(err) {
     if (err) {
       return console.log(err)
