@@ -10,7 +10,7 @@ const fs = require('fs')
 const path = require('path')
 
 // 注册版本号与描述
-commander.version('0.0.1').description('A youdao translation API tool')
+commander.version('1.0.5').description('A youdao translation API tool')
 
 // 注册参数
 commander.option('-q, --query', '要翻译的文本')
