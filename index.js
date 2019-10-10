@@ -10,14 +10,14 @@ const fs = require('fs')
 const path = require('path')
 
 // 注册版本号与描述
-commander.version('1.0.5').description('A youdao translation API tool')
+commander.version('1.0.7').description('A youdao translation API tool')
 
 // 注册参数
 commander.option('-q, --query', '要翻译的文本')
 commander.option('-k, --key', '您的应用密钥')
 commander.option('-a, --appkey', '您的应用ID')
 commander.option('-f, --file', '要翻译的文件目录')
-commander.option('-o, --output', '翻译输出目录')
+commander.option('-l, --lang', '目标语言')
 
 // 解析
 commander.parse(process.argv)
@@ -49,7 +49,7 @@ function main() {
     appKey: appKey,
     salt: salt,
     from: '',
-    to: 'en',
+    to: argv.l || argv.lang || 'en',
     sign: sign
   }
   const bar = new ProgressBar('loading [:bar] :rate/bps :percent :etas', {

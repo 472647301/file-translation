@@ -1,6 +1,6 @@
 {
   "name": "text-translation",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "description": "有道翻译API",
   "bin": {
     "text-translation": "index.js"
